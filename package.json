@@ -1,0 +1,35 @@
+{
+	"name": "wasabi-streaming-app",
+	"version": "1.0.0",
+	"description": "Stream videos from Wasabi S3 storage",
+	"homepage": "https://github.com/jamesbruddick/wasabi-streaming-app",
+	"bugs": {
+		"url": "https://github.com/jamesbruddick/wasabi-streaming-app/issues"
+	},
+	"license": "MIT",
+	"author": "jamesbruddick",
+	"main": "app.mjs",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jamesbruddick/wasabi-streaming-app.git"
+	},
+	"scripts": {
+		"start": "node app.mjs",
+		"dev": "nodemon --require dotenv/config --ext mjs --quiet app.mjs",
+		"format": "prettier . --write",
+		"update": "ncu --interactive"
+	},
+	"dependencies": {
+		"@aws-sdk/client-s3": "^3.774.0",
+		"express": "^4.21.2"
+	},
+	"devDependencies": {
+		"dotenv": "^16.4.7",
+		"nodemon": "^3.1.9",
+		"npm-check-updates": "^17.1.16",
+		"prettier": "^3.5.3"
+	},
+	"engines": {
+		"node": ">=20.17.0"
+	}
+}
